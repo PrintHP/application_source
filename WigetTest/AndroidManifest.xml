@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.wigetTest" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		
+		<receiver android:name="WidgetT">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.mamp.RING" />
+			</intent-filter>
+			
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/widget_info" />
+		</receiver>
+
+	</application>
+</manifest>
